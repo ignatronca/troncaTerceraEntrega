@@ -17,6 +17,7 @@ const agregarProductoAlCarrito = (producto) => {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(producto);
     localStorage.setItem("carrito",JSON.stringify(carrito));
+    console.log(carrito);
 };
 
 
@@ -60,6 +61,7 @@ const actualizarCarrito = () => {
     const numeroProductos = carrito.length;
     const botonCarrito = document.getElementById("botoncarrito");
     const badgeCarrito = botonCarrito.querySelector(".badge");
+    console.log(carrito);
 
     badgeCarrito.textContent = numeroProductos.toString();
 };
